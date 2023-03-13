@@ -1,0 +1,19 @@
+<app-header></app-header>
+<div *ngIf="pop1">
+    <div id="div4" *ngIf="pop">
+        <img src="https://cdn-icons-png.flaticon.com/512/0/838.png"  style="height: 50px; width: 50px;  margin-top: 30px;" alt="">
+         <img (click)="func2()" id="imgg" src="https://freesvg.org/img/TzeenieWheenie_red_green_OK_not_OK_Icons_1.png" alt="" > 
+    
+        <br>
+        <h3>Your Session has expired</h3>
+            <pre>Don't worry, we keep all of your data in place
+ You will be redirected to login page
+Click login page to continue
+            </pre>
+            <hr>
+
+            <button routerLink="/login2" id="button">Login</button>
+    </div>
+    <img  id="img" src="https://i0.wp.com/juntrax.com/blog/wp-content/uploads/2020/09/Employee-Self-Service-Portal.png?fit=2240%2C1260&ssl=1" alt="">
+</div>
+<app-footer></app-footer>

@@ -1,0 +1,33 @@
+<div id="div1">
+    <div id="div2">
+        <form action="" name="form1" class="form1" [formGroup]="loginForm"  (ngSubmit)="loginUser()">
+            <img src="https://cdn-icons-png.flaticon.com/512/5087/5087607.png" style="height: 50px; width: 50px;">
+            <div id="heading">
+                Login
+                </div>
+        
+         <div> 
+        <input type="email" placeholder="Username" id="username" name="username" formControlName="user">
+        </div>
+
+        <div>
+            <!-- <span *ngIf="user == null" style="color: red; margin-left: 30px;">username is mandatory</span> -->
+
+        <span *ngIf="user && user.invalid && user.touched " style="color: red; margin-left: 30px;">Please enter a valid username</span>
+        </div>
+        <div>
+        <input type="password" placeholder="Password" id="password" name="password"  formControlName="password" [type]="hide ? 'password' : 'text'">
+        <img  src="https://cdn-icons-png.flaticon.com/512/159/159078.png" id="togglePassword" class="eye" (click)="myFunction()" *ngIf="showw">
+        <img src="https://cdn-icons-png.flaticon.com/512/2710/2710718.png" id="togglePassword" class="eye" (click)="myFunction()" *ngIf="!showw" >
+        </div>
+        <div>
+        <span *ngIf="password && password.invalid && password.touched" style="color: red; margin-left: 30px;"> Please enter a valid password</span>
+        </div>
+    <div>
+        <button id="button" type="submit" [disabled]="loginForm.invalid" >Submit</button>
+        <p *ngIf="isError" id="error" style="color: red;"> Invalid Credentials </p>
+    </div>   
+    </form>
+    </div >
+   
+</div>

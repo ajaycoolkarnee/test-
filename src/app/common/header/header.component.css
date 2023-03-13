@@ -1,0 +1,24 @@
+#header{
+    font-size: 200%;
+    font-weight: bold;
+    color: blue;
+    /* margin: 1%; */
+    padding: 1%;
+    height: 5rem;
+    align-content: center;
+    background-color: lightblue;
+}
+
+#button{
+    /* margin-left: 60rem; */
+    /* right: -64%; */
+    padding: 0.5%;
+    color: white;
+    background-color: red;
+    position: absolute;
+    left: 85%;
+}
+
+/* @media screen and (max-width:1200px) {
+    #button {left: 50%;}
+} */

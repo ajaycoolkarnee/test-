@@ -1,0 +1,22 @@
+<div id="div1">
+    <div id="div2">
+        <form action="" name="form1" #loginForm="ngForm" (ngSubmit)="loginUser(loginForm.value)" >
+
+        <h1 id="heading">Login</h1>
+
+        <input type="email" placeholder="Username" id="username" name="username" ngModel required #name="ngModel" pattern="[a-zA-Z]+$">
+
+        <br><span *ngIf="name.invalid && name.touched" style="color: red; margin-left: 30px;">Please enter a valid input</span><br>
+
+        <input type="password" placeholder="Password" id="password" name="password" ngModel required #password="ngModel" minlength="8" >
+
+        <br>
+        <span *ngIf="password.invalid && password.touched" style="color: red; margin-left: 30px;">Please enter the password</span><br>
+
+        <input type="checkbox" (click)="myFunction()">Show Password
+
+        <button id="button" type="submit" [disabled]="loginForm.invalid">Submit</button>
+    </form>
+    </div>
+   
+</div>
